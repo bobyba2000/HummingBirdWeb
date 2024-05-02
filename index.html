@@ -30,7 +30,7 @@
   <link rel="manifest" href="manifest.json">
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "948754726";
+    const serviceWorkerVersion = "3320277465";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -40,10 +40,9 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const cardId = urlParams.get('card');
-    if (cardId !== undefined && cardId !== null && cardId !== '') {
+    const url = window.location.pathname;
+    if (url.includes('index.html') && cardId !== undefined && cardId !== null && cardId !== '') {
       window.open(`../index?card=${cardId}`, "_self");
-    }else{
-      window.open(`../`, "_self")
     }
     window.addEventListener('load', function (ev) {
       // Download main.dart.js
