@@ -42,12 +42,10 @@
     const cardId = urlParams.get('card');
     const url = window.location.pathname;
     if(url.includes('.well-known')){
-      window.open('../.well-known/assetlinks.json');
-      return;
+      window.open('../.well-known/assetlinks.json', "_self");
     }
     if (url.includes('index.html') && cardId !== undefined && cardId !== null && cardId !== '') {
       window.open(`../index?card=${cardId}`, "_self");
-      return;
     }
     window.addEventListener('load', function (ev) {
       // Download main.dart.js
