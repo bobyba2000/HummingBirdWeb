@@ -41,9 +41,6 @@
     const urlParams = new URLSearchParams(window.location.search);
     const cardId = urlParams.get('card');
     const url = window.location.pathname;
-    if(url.includes('.well-known')){
-      window.open('../.well-known/assetlinks.json', "_self");
-    }
     if (url.includes('index.html') && cardId !== undefined && cardId !== null && cardId !== '') {
       window.open(`../index?card=${cardId}`, "_self");
     }
